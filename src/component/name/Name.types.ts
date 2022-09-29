@@ -1,3 +1,3 @@
 export type NameProps = {
-    name?: String,
-}
+  name?: String;
+};

@@ -5,7 +5,7 @@ import { Application } from './component/application/Application';
 import { Skills } from './component/skills/Skills';
 import { Counter } from './component/counter/Counter';
 import { MuiMode } from './component/mui/MuiMode';
-import { AppProviders } from './providers/AppProviders'
+import { AppProviders } from './providers/AppProviders';
 
 function App() {
   let currentPage: string = 'Counter';
@@ -13,16 +13,18 @@ function App() {
   let htmlForRender: any = undefined;
   switch (currentPage.trim().toLocaleLowerCase()) {
     case 'application':
-      htmlForRender = <Application />
+      htmlForRender = <Application />;
       break;
     case 'skills':
-      htmlForRender = <Skills skills={['Swim', 'Dance', 'Singing', 'Sports']} />
+      htmlForRender = (
+        <Skills skills={['Swim', 'Dance', 'Singing', 'Sports']} />
+      );
       break;
     case 'counter':
-      htmlForRender = <Counter />
+      htmlForRender = <Counter />;
       break;
     default:
-      htmlForRender = <Loader />
+      htmlForRender = <Loader />;
       break;
 
     // return htmlForRender;
@@ -30,7 +32,7 @@ function App() {
   // }
   return (
     <AppProviders>
-      <div className='App'>
+      <div className="App">
         <MuiMode />
         <br />
         <br />
